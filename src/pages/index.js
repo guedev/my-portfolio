@@ -2,11 +2,12 @@ import Head from "next/head";
 import { useState } from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import { SiJavascript, SiReact, SiHtml5, SiCss3, SiTailwindcss, SiNodedotjs, SiOracle } from "react-icons/si";
 import Image from "next/image";
 import avatar from "../../public/avatar.png";
-import design from '../../public/design.png';
-import code from '../../public/code.png';
-import consulting from '../../public/consulting.png';
+import front from '../../public/front.png';
+import back from '../../public/back.png';
+import dataBase from '../../public/database.png';
 import web1 from '../../public/web1.png';
 import web2 from '../../public/web2.png';
 import web3 from '../../public/web3.png';
@@ -87,47 +88,40 @@ export default function Home() {
           </div>
           <div className="lg:flex gap-10">
             <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
-              <Image src={design} width={100} height={100} className='mx-auto'/>
-              <h3 className="text-lg font-medium pt-8 pb-2  ">
-                Beautiful Designs
+              <Image src={front} width={100} height={100} className='mx-auto'/>
+              <h3 className="text-lg pt-8 pb-2 font-bold ">
+                Sólidos
               </h3>
-              <p className="py-2">
-                Creating elegant designs suited for your needs following core
-                design theory.
-              </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
+              
+              {/* Icons front end */}
+              <div className="text-5xl flex flex-col gap-6 items-center mt-5 md:flex-row md:justify-center md:mt-8">
+               <SiJavascript className="rounded-lg text-gray-600 hover:text-gray-800  "/>
+               <SiReact className=" text-gray-600 hover:text-gray-800"/>
+               <SiHtml5 className=" text-gray-600 hover:text-gray-800" />
+               <SiCss3 className=" text-gray-600 hover:text-gray-800" />
+               <SiTailwindcss className=" text-gray-600 hover:text-gray-800" />
+              </div>
+              
+            </div>
+
+      
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+              <Image src={back} width={100} height={100} className='mx-auto'/>
+              <h3 className="text-lg font-bold pt-8 pb-2 ">
+                Em Estudo
+              </h3>
+          
+            {/* Icons back-end */}
+            <div className="text-5xl flex flex-col gap-6 items-center mt-5 md:flex-row md:justify-center md:mt-8">
+            <SiNodedotjs className=" text-gray-600 hover:text-gray-800"/>
+            <SiOracle className=" text-gray-600 hover:text-gray-800"/>
+            </div>
+            
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image src={code} width={100} height={100} className='mx-auto'/>
-              <h3 className="text-lg font-medium pt-8 pb-2 ">
-                Code your dream project
-              </h3>
-              <p className="py-2">
-                Do you have an idea for your next great website? Let's make it a
-                reality.
-              </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
-            </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
-              <Image src={consulting} width={100} height={100} className='mx-auto'/>
-              <h3 className="text-lg font-medium pt-8 pb-2 ">Consulting</h3>
-              <p className="py-2">
-                Are you interested in feedback for your current project? I can
-                give you tips and tricks to level it up.
-              </p>
-              <h4 className="py-4 text-teal-600">Design Tools I Use</h4>
-              <p className="text-gray-800 py-1">Photoshop</p>
-              <p className="text-gray-800 py-1">Illustrator</p>
-              <p className="text-gray-800 py-1">Figma</p>
-              <p className="text-gray-800 py-1">Indesign</p>
+              <Image src={dataBase} width={100} height={100} className='mx-auto'/>
+              <h3 className="text-lg font-bold pt-8 pb-2 ">Interesses</h3>
+              
             </div>
           </div>
         </section>
