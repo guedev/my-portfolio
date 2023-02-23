@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useState } from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import { SiJavascript, SiReact, SiHtml5, SiCss3, SiTailwindcss, SiNodedotjs, SiOracle } from "react-icons/si";
+import { SiJavascript, SiReact, SiHtml5, SiCss3, SiTailwindcss, SiNodedotjs, SiOracle, SiPython, SiNextdotjs, SiBootstrap, SiNestjs, SiPostgresql, SiRedux, SiGit, SiFlutter, SiAmazonaws } from "react-icons/si";
 import Image from "next/image";
 import avatar from "../../public/avatar.png";
 import front from '../../public/front.png';
@@ -75,6 +75,7 @@ export default function Home() {
 
         {/* Second Section */}
         <section>
+
           {/* My Knoledges */}
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Conhecimentos</h3>
@@ -86,42 +87,55 @@ export default function Home() {
               programming and teaching.
             </p>
           </div>
+          
           <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
+            
+            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1 md:w-1/3">
               <Image src={front} width={100} height={100} className='mx-auto'/>
               <h3 className="text-lg pt-8 pb-2 font-bold ">
                 Sólidos
               </h3>
               
               {/* Icons front end */}
-              <div className="text-5xl flex flex-col gap-6 items-center mt-5 md:flex-row md:justify-center md:mt-8">
+              <div className="text-5xl flex flex-col gap-6 items-center mt-5 md:flex-row md:justify-center md:mt-8 md:flex-wrap">
                <SiJavascript className="rounded-lg text-gray-600 hover:text-gray-800  "/>
                <SiReact className=" text-gray-600 hover:text-gray-800"/>
                <SiHtml5 className=" text-gray-600 hover:text-gray-800" />
                <SiCss3 className=" text-gray-600 hover:text-gray-800" />
                <SiTailwindcss className=" text-gray-600 hover:text-gray-800" />
+               <SiBootstrap  className=" text-gray-600 hover:text-gray-800"/>
+               <SiPostgresql className=" text-gray-600 hover:text-gray-800"/>
+               <SiGit className=" text-gray-600 hover:text-gray-800"/>
               </div>
               
             </div>
 
       
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1 md:w-1/3">
               <Image src={back} width={100} height={100} className='mx-auto'/>
               <h3 className="text-lg font-bold pt-8 pb-2 ">
                 Em Estudo
               </h3>
           
             {/* Icons back-end */}
-            <div className="text-5xl flex flex-col gap-6 items-center mt-5 md:flex-row md:justify-center md:mt-8">
+            <div className="text-5xl flex flex-col gap-6 items-center mt-5 md:flex-row md:justify-center md:mt-8 md:flex-wrap">
             <SiNodedotjs className=" text-gray-600 hover:text-gray-800"/>
             <SiOracle className=" text-gray-600 hover:text-gray-800"/>
+            <SiNextdotjs className=" text-gray-600 hover:text-gray-800"/>
+            <SiRedux className=" text-gray-600 hover:text-gray-800"/>
+            <SiAmazonaws className=" text-gray-600 hover:text-gray-800"/>
             </div>
             
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1 md:w-1/3 md:flex-wrap">
               <Image src={dataBase} width={100} height={100} className='mx-auto'/>
               <h3 className="text-lg font-bold pt-8 pb-2 ">Interesses</h3>
-              
+              <div className="text-5xl flex flex-col gap-6 items-center mt-5 md:flex-row md:justify-center md:mt-8">
+              <SiPython className=" text-gray-600 hover:text-gray-800"/>
+              <SiNestjs className=" text-gray-600 hover:text-gray-800"/>
+              <SiFlutter className=" text-gray-600 hover:text-gray-800"/>
+              </div>
+                
             </div>
           </div>
         </section>
