@@ -63,11 +63,11 @@ export default function Home() {
 
             {/* Social buttons */}
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-              <a href='#'><AiFillGithub /></a>
-              <a href='#'><AiFillLinkedin /></a>
-              <a href='#'> <AiFillInstagram /></a>
+              <a href='#'><AiFillGithub className="hover:text-gray-800 dark:hover:text-gray-600"/></a>
+              <a href='#'><AiFillLinkedin className="hover:text-gray-800 dark:hover:text-gray-600"/></a>
+              <a href='#'> <AiFillInstagram className="hover:text-gray-800 dark:hover:text-gray-600"/></a>
             </div>
-            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
+            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
               <Image src={avatar} layout="fill" objectFit="cover" alt='avatar 3d do lucas guedes'/>
             </div>
           </div>
@@ -96,16 +96,18 @@ export default function Home() {
                 Sólidos
               </h3>
               
-              {/* Icons front end */}
+              <hr></hr>
+
+              {/* Icons Solid */}
               <div className="text-5xl flex flex-col gap-6 items-center mt-5 md:flex-row md:justify-center md:mt-8 md:flex-wrap">
-               <SiJavascript className="rounded-lg text-gray-600 hover:text-gray-800  "/>
-               <SiReact className=" text-gray-600 hover:text-gray-800"/>
-               <SiHtml5 className=" text-gray-600 hover:text-gray-800" />
-               <SiCss3 className=" text-gray-600 hover:text-gray-800" />
-               <SiTailwindcss className=" text-gray-600 hover:text-gray-800" />
-               <SiBootstrap  className=" text-gray-600 hover:text-gray-800"/>
-               <SiPostgresql className=" text-gray-600 hover:text-gray-800"/>
-               <SiGit className=" text-gray-600 hover:text-gray-800"/>
+               <SiJavascript className="rounded-lg text-gray-600 hover:text-gray-800 hover:text-6xl  hover:transition duration-700 ease-in-out"/>
+               <SiReact className=" text-gray-600 hover:text-gray-800 hover:text-6xl hover:transition duration-700 ease-in-out"/>
+               <SiHtml5 className=" text-gray-600 hover:text-gray-800 hover:text-6xl hover:transition duration-700 ease-in-out" />
+               <SiCss3 className=" text-gray-600 hover:text-gray-800 hover:text-6xl hover:transition duration-700 ease-in-out" />
+               <SiTailwindcss className=" text-gray-600 hover:text-gray-800 hover:text-6xl hover:transition duration-700 ease-in-out" />
+               <SiBootstrap  className=" text-gray-600 hover:text-gray-800 hover:text-6xl hover:transition duration-700 ease-in-out"/>
+               <SiPostgresql className=" text-gray-600 hover:text-gray-800 hover:text-6xl hover:transition duration-700 ease-in-out"/>
+               <SiGit className=" text-gray-600 hover:text-gray-800 hover:text-6xl hover:transition duration-700 ease-in-out"/>
               </div>
               
             </div>
@@ -116,24 +118,30 @@ export default function Home() {
               <h3 className="text-lg font-bold pt-8 pb-2 ">
                 Em Estudo
               </h3>
+
+              <hr></hr>
           
-            {/* Icons back-end */}
+            {/* Icons Estudy */}
             <div className="text-5xl flex flex-col gap-6 items-center mt-5 md:flex-row md:justify-center md:mt-8 md:flex-wrap">
-            <SiNodedotjs className=" text-gray-600 hover:text-gray-800"/>
-            <SiOracle className=" text-gray-600 hover:text-gray-800"/>
-            <SiNextdotjs className=" text-gray-600 hover:text-gray-800"/>
-            <SiRedux className=" text-gray-600 hover:text-gray-800"/>
-            <SiAmazonaws className=" text-gray-600 hover:text-gray-800"/>
+            <SiNodedotjs className=" text-gray-600 hover:text-gray-800 hover:text-6xl  hover:transition duration-700 ease-in-out"/>
+            <SiOracle className=" text-gray-600 hover:text-gray-800 hover:text-6xl  hover:transition duration-700 ease-in-out"/>
+            <SiNextdotjs className=" text-gray-600 hover:text-gray-800 hover:text-6xl  hover:transition duration-700 ease-in-out"/>
+            <SiRedux className=" text-gray-600 hover:text-gray-800 hover:text-6xl  hover:transition duration-700 ease-in-out"/>
+            <SiAmazonaws className=" text-gray-600 hover:text-gray-800 hover:text-6xl  hover:transition duration-700 ease-in-out"/>
             </div>
             
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1 md:w-1/3 md:flex-wrap">
               <Image src={dataBase} width={100} height={100} className='mx-auto'/>
               <h3 className="text-lg font-bold pt-8 pb-2 ">Interesses</h3>
-              <div className="text-5xl flex flex-col gap-6 items-center mt-5 md:flex-row md:justify-center md:mt-8">
-              <SiPython className=" text-gray-600 hover:text-gray-800"/>
-              <SiNestjs className=" text-gray-600 hover:text-gray-800"/>
-              <SiFlutter className=" text-gray-600 hover:text-gray-800"/>
+
+              <hr></hr>
+
+              {/* Icons interesses */}
+              <div className="text-5xl flex flex-col gap-6 items-center mt-5 md:flex-row md:justify-center md:mt-8 md:flex-wrap">
+              <SiPython className=" text-gray-600 hover:text-gray-800 hover:text-6xl  hover:transition duration-700 ease-in-out"/>
+              <SiNestjs className=" text-gray-600 hover:text-gray-800 hover:text-6xl  hover:transition duration-700 ease-in-out"/>
+              <SiFlutter className=" text-gray-600 hover:text-gray-800 hover:text-6xl  hover:transition duration-700 ease-in-out"/>
               </div>
                 
             </div>
