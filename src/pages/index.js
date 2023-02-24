@@ -11,9 +11,7 @@ import dataBase from '../../public/database.png';
 import netflix from '../../public/netflix.png';
 import pokemon from '../../public/pokemon.png';
 import guedmovie from '../../public/guedmovie.png';
-import web4 from '../../public/web4.png';
-import web5 from '../../public/web5.png';
-import web6 from '../../public/web6.png';
+
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -30,12 +28,20 @@ export default function Home() {
       headers: {
         "Content-Type": "application/json",
       },
+      
       body: JSON.stringify({ name, email, message }),
+      
     });
+
 
     const result = await res.json();
 
+  
+
     console.log(result);
+
+    
+
   };
   
 
