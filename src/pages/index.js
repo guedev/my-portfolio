@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/jsx-no-comment-textnodes */
 import Head from "next/head";
 import { useState } from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
@@ -11,6 +13,10 @@ import dataBase from '../../public/database.png';
 import netflix from '../../public/netflix.png';
 import pokemon from '../../public/pokemon.png';
 import guedmovie from '../../public/guedmovie.png';
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 
 export default function Home() {
@@ -33,12 +39,18 @@ export default function Home() {
       
     });
 
+    if (res.json(200)) {
+      toast.success("E-mail enviado com sucesso!");
+    } else {
+      toast.error("Houve um erro ao enviar o e-mail. Tente novamente mais tarde.");
+    }
 
-    const result = await res.json();
+   
+    // const result = await res.json();
 
   
 
-    console.log(result);
+    // console.log(result);
 
     
 
@@ -122,7 +134,7 @@ export default function Home() {
           <div className="lg:flex gap-10">
 
             <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1 lg:w-1/3 dark:bg-gray-700">
-              <Image src={front} width={100} height={100} className='mx-auto' />
+              <Image src={front} width={100} height={100} alt="icone 1" className='mx-auto' />
               <h3 className="text-lg pt-8 pb-2 font-bold dark:text-gray-200">
                 Sólidos
               </h3>
@@ -145,7 +157,7 @@ export default function Home() {
 
 
             <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1 lg:w-1/3 dark:bg-gray-700">
-              <Image src={back} width={100} height={100} className='mx-auto' />
+              <Image src={back} width={100} height={100} alt="icone 2" className='mx-auto' />
               <h3 className="text-lg font-bold pt-8 pb-2 dark:text-gray-200">
                 Em Estudo
               </h3>
@@ -163,7 +175,7 @@ export default function Home() {
 
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1 lg:w-1/3 md:flex-wrap dark:bg-gray-700">
-              <Image src={dataBase} width={100} height={100} className='mx-auto' />
+              <Image src={dataBase} width={100} height={100} alt="icone 3" className='mx-auto' />
               <h3 className="text-lg font-bold pt-8 pb-2 dark:text-gray-200">Interesses</h3>
 
               <hr></hr>
@@ -188,6 +200,7 @@ export default function Home() {
             <h3 className="text-3xl py-1 dark:text-white ">Projetos</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Since the beginning of my journey as a freelance designer and
+              // eslint-disable-next-line react/no-unescaped-entities
               developer, I've done remote work for
               <span className="text-teal-500"> agencies </span>
               consulted for <span className="text-teal-500">startups </span>
@@ -316,7 +329,7 @@ export default function Home() {
       </label>
       <button type="submit">Enviar</button>
     </form>
-
+      <ToastContainer />
 
           </div>
         </section>

@@ -1,6 +1,6 @@
 import { createTransport } from "nodemailer";
 import dotenv from "dotenv";
-
+import "react-toastify/dist/ReactToastify.css";
 
 
 dotenv.config();
@@ -35,7 +35,6 @@ export default async function handler(req, res) {
 
     res.status(200).json({ message: "E-mail sent successfully" });
     
-
 
   } else {
     res.setHeader("Allow", "POST");
