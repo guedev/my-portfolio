@@ -1,17 +1,35 @@
+/* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
 import { useState } from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import { SiJavascript, SiReact, SiHtml5, SiCss3, SiTailwindcss, SiNodedotjs, SiOracle, SiPython, SiNextdotjs, SiBootstrap, SiNestjs, SiPostgresql, SiRedux, SiGit, SiFlutter, SiAmazonaws } from "react-icons/si";
+import {
+  SiJavascript,
+  SiReact,
+  SiHtml5,
+  SiCss3,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiOracle,
+  SiPython,
+  SiNextdotjs,
+  SiBootstrap,
+  SiNestjs,
+  SiPostgresql,
+  SiRedux,
+  SiGit,
+  SiFlutter,
+  SiAmazonaws,
+} from "react-icons/si";
 import Image from "next/image";
 import avatar from "../../public/avatar.png";
-import front from '../../public/front.png';
-import back from '../../public/back.png';
-import dataBase from '../../public/database.png';
-import netflix from '../../public/netflix.png';
-import pokemon from '../../public/pokemon.png';
-import guedmovie from '../../public/guedmovie.png';
-
+import front from "../../public/front.png";
+import back from "../../public/back.png";
+import dataBase from "../../public/database.png";
+import netflix from "../../public/netflix.png";
+import pokemon from "../../public/pokemon.png";
+import guedmovie from "../../public/guedmovie.png";
+import emailSend from "../../public/email_send.svg";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -28,23 +46,14 @@ export default function Home() {
       headers: {
         "Content-Type": "application/json",
       },
-      
-      body: JSON.stringify({ name, email, message }),
-      
-    });
 
+      body: JSON.stringify({ name, email, message }),
+    });
 
     const result = await res.json();
 
-  
-
     console.log(result);
-
-    
-
   };
-  
-
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -53,10 +62,10 @@ export default function Home() {
         <meta name="description" content="Feito com amor" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main 
-      className="bg-white px-10 
-      dark:bg-gray-900 md:px-20 lg:px-40">
-
+      <main
+        className="bg-white px-10 
+      dark:bg-gray-900 md:px-20 lg:px-40"
+      >
         {/* First Section */}
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between dark:text-white">
@@ -88,29 +97,48 @@ export default function Home() {
               Desenvolvedor Front-end.
             </h3>
             <p className="text-md mb-8 py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur lectus urna, et iaculis libero consectetur sed. Morbi sagittis nisi ut nisl scelerisque, a malesuada nisl faucibus.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+              consectetur lectus urna, et iaculis libero consectetur sed. Morbi
+              sagittis nisi ut nisl scelerisque, a malesuada nisl faucibus.
             </p>
 
             {/* Social buttons */}
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-              <a href='#'><AiFillGithub className="hover:text-gray-800 dark:hover:text-gray-600" /></a>
-              <a href='#'><AiFillLinkedin className="hover:text-gray-800 dark:hover:text-gray-600" /></a>
-              <a href='#'> <AiFillInstagram className="hover:text-gray-800 dark:hover:text-gray-600" /></a>
+              <a href="#">
+                <AiFillGithub className="hover:text-gray-800 dark:hover:text-gray-600" />
+              </a>
+              <a href="#">
+                <AiFillLinkedin className="hover:text-gray-800 dark:hover:text-gray-600" />
+              </a>
+              <a href="#">
+                {" "}
+                <AiFillInstagram className="hover:text-gray-800 dark:hover:text-gray-600" />
+              </a>
             </div>
             <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
-              <Image src={avatar} layout="fill" objectFit="cover" alt='avatar 3d do lucas guedes' />
+              <Image
+                src={avatar}
+                layout="fill"
+                objectFit="cover"
+                alt="avatar 3d do lucas guedes"
+              />
             </div>
           </div>
         </section>
 
         {/* Second Section */}
         <section>
-
           {/* My Knoledges */}
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Tecnologias</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Fusce imperdiet elementum est. Duis quis bibendum dolor, nec volutpat nunc. Vivamus scelerisque vitae justo sit amet ornare. Nam nec  <span className="text-teal-500"> agencies </span> mauris eleifend ante imperdiet semper. Mauris <span className="text-teal-500">startups </span> ullamcorper scelerisque odio, id vestibulum sem ultrices id. Nam aliquam, ipsum tincidunt.
+              Fusce imperdiet elementum est. Duis quis bibendum dolor, nec
+              volutpat nunc. Vivamus scelerisque vitae justo sit amet ornare.
+              Nam nec <span className="text-teal-500"> agencies </span> mauris
+              eleifend ante imperdiet semper. Mauris{" "}
+              <span className="text-teal-500">startups </span> ullamcorper
+              scelerisque odio, id vestibulum sem ultrices id. Nam aliquam,
+              ipsum tincidunt.
             </p>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               I offer from a wide range of services, including brand design,
@@ -120,9 +148,8 @@ export default function Home() {
 
           {/* Cards Conhecimentos */}
           <div className="lg:flex gap-10">
-
             <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1 lg:w-1/3 dark:bg-gray-700">
-              <Image src={front} width={100} height={100} className='mx-auto' />
+              <Image src={front} width={100} height={100} className="mx-auto" />
               <h3 className="text-lg pt-8 pb-2 font-bold dark:text-gray-200">
                 Sólidos
               </h3>
@@ -140,12 +167,10 @@ export default function Home() {
                 <SiPostgresql className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400 " />
                 <SiGit className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
               </div>
-
             </div>
 
-
             <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1 lg:w-1/3 dark:bg-gray-700">
-              <Image src={back} width={100} height={100} className='mx-auto' />
+              <Image src={back} width={100} height={100} className="mx-auto" />
               <h3 className="text-lg font-bold pt-8 pb-2 dark:text-gray-200">
                 Em Estudo
               </h3>
@@ -158,13 +183,18 @@ export default function Home() {
                 <SiOracle className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
                 <SiNextdotjs className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
                 <SiRedux className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-                
               </div>
-
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1 lg:w-1/3 md:flex-wrap dark:bg-gray-700">
-              <Image src={dataBase} width={100} height={100} className='mx-auto' />
-              <h3 className="text-lg font-bold pt-8 pb-2 dark:text-gray-200">Interesses</h3>
+              <Image
+                src={dataBase}
+                width={100}
+                height={100}
+                className="mx-auto"
+              />
+              <h3 className="text-lg font-bold pt-8 pb-2 dark:text-gray-200">
+                Interesses
+              </h3>
 
               <hr></hr>
 
@@ -175,14 +205,12 @@ export default function Home() {
                 <SiFlutter className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
                 <SiAmazonaws className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
               </div>
-
             </div>
           </div>
         </section>
 
         {/* Third section */}
         <section className="py-10">
-
           {/* Portfolio */}
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Projetos</h3>
@@ -198,13 +226,11 @@ export default function Home() {
               I offer from a wide range of services, including brand design,
               programming and teaching.
             </p>
-
           </div>
 
           {/* Project Images   */}
 
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-
             {/* Netflix clone */}
             <div className="flex-1 text-center flex flex-col items-center shadow-lg rounded-xl dark:bg-gray-700 lg:w-1/3">
               <Image
@@ -217,7 +243,13 @@ export default function Home() {
               />
               <h3 className="font-burtons dark:text-gray-200">Netflix Clone</h3>
               <p className="mt-4 px-8 dark:text-gray-200">
-                Projeto feito utilizando ReactJs e API do site <a className="hover:text-gray-500" href="https://www.themoviedb.org/?language=pt">Themoviedb.org</a>
+                Projeto feito utilizando ReactJs e API do site{" "}
+                <a
+                  className="hover:text-gray-500"
+                  href="https://www.themoviedb.org/?language=pt"
+                >
+                  Themoviedb.org
+                </a>
               </p>
               {/* Projects Buttons */}
               <a
@@ -240,7 +272,8 @@ export default function Home() {
               />
               <h3 className="font-burtons dark:text-gray-200">Pokedex</h3>
               <p className="mt-4 px-8 dark:text-gray-200">
-              Projeto utilizando HTML, CSS, e Javascript (Sem utilização de API).
+                Projeto utilizando HTML, CSS, e Javascript (Sem utilização de
+                API).
               </p>
               {/* Projects Buttons */}
               <a
@@ -263,7 +296,14 @@ export default function Home() {
               />
               <h3 className="font-burtons dark:text-gray-200">GuedMovie</h3>
               <p className="mt-4 px-8 dark:text-gray-200">
-              Mostrando avalição dos filmes e alguns outros detalhes, utilizando ReactJs e API do <a className="hover:text-gray-500" href="https://www.themoviedb.org/?language=pt">Themoviedb.org</a>
+                Mostrando avalição dos filmes e alguns outros detalhes,
+                utilizando ReactJs e API do{" "}
+                <a
+                  className="hover:text-gray-500"
+                  href="https://www.themoviedb.org/?language=pt"
+                >
+                  Themoviedb.org
+                </a>
               </p>
               {/* Projects Buttons */}
               <a
@@ -278,49 +318,56 @@ export default function Home() {
 
         {/* Fourth Section */}
         <section>
-
           {/* Contate-me */}
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Entre em contato</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Since the beginning of my journey as a freelance designer and
-              developer, I've done remote work for
-              and collaborated with talanted people to create digital products
-              for both business and consumer use.
+              developer, I've done remote work for and collaborated with
+              talanted people to create digital products for both business and
+              consumer use.
             </p>
+            
+            {/* <div className="p-8 flex justify-center">
+            <Image src={emailSend} alt="Email" className="w-3/4 lg:w-2/5" />
+            </div> */}
+            
+            <div className="p-8 mt-8 lg:gap-16 lg:flex lg:flex-row items-center justify-center ">
+            <Image src={emailSend} alt="Email" className="mb-8 w-3/4 lg:w-1/3 sm:w-full " />
+            <form onSubmit={handleSubmit} action="" className=" lg:w-2/5">
+                <div class="mb-4">
+                    <input 
+                    type="text" 
+                    placeholder="Nome" 
+                    value={name} 
+                    onChange={(e) => setName(e.target.value)}
+                    class="appearance-none block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none" />
+                </div>
+                <div class="mb-4">
+                    <input 
+                    type="email" 
+                    placeholder="Email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)} 
+                    class="appearance-none block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none " />
+                </div>
+                <div class="mb-4">
+                    <textarea 
+                    placeholder="Mensagem"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    class="appearance-none block resize-none w-full px-4 py-3 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none " />
+                </div>
+                <div class="mb-4">
+                    <button type="submit" class="inline-block w-full px-8 py-4 leading-none text-white bg-gradient-to-r from-cyan-500 text- to-teal-500 font-semibold rounded shadow hover:bg-gradient-to-r hover:from-teal-600 hover:to-cyan-600">Enviar</button>
+                </div>
+            </form>
+            </div>
 
-
-            <form onSubmit={handleSubmit}>
-      <label>
-        Nome:
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </label>
-      <label>
-        Email:
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </label>
-      <label>
-        Mensagem:
-        <textarea
-          value={message}
-          onChange={(e) => setMessage(e.target.value)}
-        />
-      </label>
-      <button type="submit">Enviar</button>
-    </form>
 
 
           </div>
         </section>
-
       </main>
     </div>
   );
