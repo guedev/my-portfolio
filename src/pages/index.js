@@ -29,21 +29,43 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("/api/email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+    // const res = await fetch("/api/email", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
       
-      body: JSON.stringify({ name, email, message }),
+    //   body: JSON.stringify({ name, email, message }),
       
-    });
+    // });
 
-    if (res.json(200)) {
-      toast.success("E-mail enviado com sucesso!");
-    } else {
-      toast.error("Houve um erro ao enviar o e-mail. Tente novamente mais tarde.");
-    }
+    try {
+      const res = await fetch("/api/email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          
+          body: JSON.stringify({ name, email, message }),
+          
+        })
+        if(!res.ok) {
+          throw new Error("Erro ao enviar email");
+        } else {
+          toast.success("E-mail enviado com sucesso!");
+        }
+      }
+       catch (error) {
+         console.error(error);
+         toast.error("Houve um erro ao enviar o e-mail. Tente novamente mais tarde.");
+       }  
+
+
+    // if (res.json(200)) {
+    //   toast.success("E-mail enviado com sucesso!");
+    // } else {
+    //   toast.error("Houve um erro ao enviar o e-mail. Tente novamente mais tarde.");
+    // }
 
    
     // const result = await res.json();
