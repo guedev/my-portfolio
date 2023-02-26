@@ -23,6 +23,7 @@ import {
   SiGit,
   SiFlutter,
   SiAmazonaws,
+  SiWhatsapp,
 } from "react-icons/si";
 import Image from "next/image";
 import avatar from "../../public/avatar.png";
@@ -46,25 +47,24 @@ export default function Home() {
 
     try {
       const res = await fetch("/api/email", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          
-          body: JSON.stringify({ name, email, message }),
-          
-        })
-        if(!res.ok) {
-          throw new Error("Erro ao enviar email");
-        } else {
-          toast.success("E-mail enviado com sucesso!");
-        }
-      }
-       catch (error) {
-         console.error(error);
-         toast.error("Houve um erro ao enviar o e-mail. Tente novamente mais tarde.");
-       }  
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
 
+        body: JSON.stringify({ name, email, message }),
+      });
+      if (!res.ok) {
+        throw new Error("Erro ao enviar email");
+      } else {
+        toast.success("E-mail enviado com sucesso!");
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error(
+        "Houve um erro ao enviar o e-mail. Tente novamente mais tarde."
+      );
+    }
   };
 
   return (
@@ -116,14 +116,13 @@ export default function Home() {
 
             {/* Social buttons */}
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-              <a href="#">
+              <a href="https://github.com/guedev" target="_blank" rel="noopener noreferrer">
                 <AiFillGithub className="hover:text-gray-800 dark:hover:text-gray-600" />
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/lucasguedes27/" target="_blank" rel="noopener noreferrer">
                 <AiFillLinkedin className="hover:text-gray-800 dark:hover:text-gray-600" />
               </a>
-              <a href="#">
-                {" "}
+              <a href="https://www.instagram.com/gued_1/" target="_blank" rel="noopener noreferrer">
                 <AiFillInstagram className="hover:text-gray-800 dark:hover:text-gray-600" />
               </a>
             </div>
@@ -339,46 +338,84 @@ export default function Home() {
               talanted people to create digital products for both business and
               consumer use.
             </p>
-            
+
             {/* <div className="p-8 flex justify-center">
             <Image src={emailSend} alt="Email" className="w-3/4 lg:w-2/5" />
             </div> */}
-            
+
             <div className="p-8 mt-8 lg:gap-16 lg:flex lg:flex-row items-center justify-center ">
-            <Image src={emailSend} alt="Email" className="mb-8 w-3/4 lg:w-1/3 sm:w-full " />
-            <form onSubmit={handleSubmit} action="" className=" lg:w-2/5">
+              <Image
+                src={emailSend}
+                alt="Email"
+                className="mb-8 w-3/4 lg:w-1/3 sm:w-full "
+              />
+              <form onSubmit={handleSubmit} action="" className=" lg:w-2/5">
                 <div class="mb-4">
-                    <input 
-                    type="text" 
-                    placeholder="Nome" 
-                    value={name} 
+                  <input
+                    type="text"
+                    placeholder="Nome"
+                    value={name}
                     onChange={(e) => setName(e.target.value)}
-                    class="appearance-none block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none" />
+                    class="appearance-none block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none"
+                  />
                 </div>
                 <div class="mb-4">
-                    <input 
-                    type="email" 
+                  <input
+                    type="email"
                     placeholder="Email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)} 
-                    class="appearance-none block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none " />
+                    onChange={(e) => setEmail(e.target.value)}
+                    class="appearance-none block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none "
+                  />
                 </div>
                 <div class="mb-4">
-                    <textarea 
+                  <textarea
                     placeholder="Mensagem"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    class="appearance-none block resize-none w-full px-4 py-3 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none " />
+                    class="appearance-none block resize-none w-full px-4 py-3 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none "
+                  />
                 </div>
                 <div class="mb-4">
-                    <button type="submit" class="inline-block w-full px-8 py-4 leading-none text-white bg-gradient-to-r from-cyan-500 text- to-teal-500 font-semibold rounded shadow hover:bg-gradient-to-r hover:from-teal-600 hover:to-cyan-600">Enviar</button>
+                  <button
+                    type="submit"
+                    class="inline-block w-full px-8 py-4 leading-none text-white bg-gradient-to-r from-cyan-500 text- to-teal-500 font-semibold rounded shadow hover:bg-gradient-to-r hover:from-teal-600 hover:to-cyan-600"
+                  >
+                    Enviar
+                  </button>
                 </div>
-            </form>
-            <ToastContainer />
+              </form>
+              <ToastContainer />
             </div>
 
+            <hr></hr>
 
-
+            <footer className="mt-8 flex flex-col items-center">
+              {/* Zip zop */}
+              <div className="text-center">
+              <a
+              href="https://api.whatsapp.com/send?phone=5591988719255&text=Olá,%20Lucas.%20Acessei%20seu%20site%20e%20tenho%20interesse%20em%20conversar%20sobre%20alguns%20projetos"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-500 hover:bg-green-700 text-white w-4/5 font-bold mx-auto py-2 px-4 rounded flex items-center"
+              >
+              <SiWhatsapp className="mr-2 text-4xl" />
+              Enviar mensagem no WhatsApp
+              </a>
+              </div>
+              <div className="text-5xl flex justify-center mt-4 gap-8 py-3 text-gray-600 dark:text-gray-400">
+              <a href="https://github.com/guedev" target="_blank" rel="noopener noreferrer">
+                <AiFillGithub className="hover:text-gray-800 dark:hover:text-gray-600" />
+              </a>
+              <a href="https://www.linkedin.com/in/lucasguedes27/" target="_blank" rel="noopener noreferrer">
+                <AiFillLinkedin className="hover:text-gray-800 dark:hover:text-gray-600" />
+              </a>
+              <a href="https://www.instagram.com/gued_1/" target="_blank" rel="noopener noreferrer">
+                <AiFillInstagram className="hover:text-gray-800 dark:hover:text-gray-600" />
+              </a>
+            </div>
+            <span className="mt-4 mb-8 font-bold dark:text-gray-200">Desenvolvido com ❤️ por Lucas Guedes</span>
+            </footer>
           </div>
         </section>
       </main>
