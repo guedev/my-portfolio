@@ -1,6 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import Head from "next/head";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import {
@@ -41,18 +44,27 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("/api/email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+    try {
+      const res = await fetch("/api/email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          
+          body: JSON.stringify({ name, email, message }),
+          
+        })
+        if(!res.ok) {
+          throw new Error("Erro ao enviar email");
+        } else {
+          toast.success("E-mail enviado com sucesso!");
+        }
+      }
+       catch (error) {
+         console.error(error);
+         toast.error("Houve um erro ao enviar o e-mail. Tente novamente mais tarde.");
+       }  
 
-      body: JSON.stringify({ name, email, message }),
-    });
-
-    const result = await res.json();
-
-    console.log(result);
   };
 
   return (
@@ -362,6 +374,7 @@ export default function Home() {
                     <button type="submit" class="inline-block w-full px-8 py-4 leading-none text-white bg-gradient-to-r from-cyan-500 text- to-teal-500 font-semibold rounded shadow hover:bg-gradient-to-r hover:from-teal-600 hover:to-cyan-600">Enviar</button>
                 </div>
             </form>
+            <ToastContainer />
             </div>
 
 

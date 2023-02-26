@@ -1,6 +1,9 @@
 import { createTransport } from "nodemailer";
 import dotenv from "dotenv";
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
 
 dotenv.config();
