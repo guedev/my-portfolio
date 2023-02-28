@@ -4,7 +4,7 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsFillMoonStarsFill, BsFillEmojiSunglassesFill } from "react-icons/bs";
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import {
   SiJavascript,
@@ -37,6 +37,16 @@ import emailSend from "../../public/email_send.svg";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  
+  // Change icons theme
+  const icon = darkMode ? (
+    <BsFillEmojiSunglassesFill />
+  ) : (
+    <BsFillMoonStarsFill />
+  );
+
+  
+  // Email function configuration
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -84,14 +94,16 @@ export default function Home() {
             <h1 className="font-burtons text-xl">Lucas Guedes</h1>
             <ul className="flex items-center">
               <li>
-                <BsFillMoonStarsFill
+                <a
                   onClick={() => setDarkMode(!darkMode)}
                   className=" cursor-pointer text-2xl"
-                />
+                >
+                  {icon}
+                </a>
               </li>
               <li>
                 <a
-                  className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8"
+                  className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8 hover:bg-gradient-to-r hover:from-teal-600 hover:to-cyan-600"
                   href="#"
                 >
                   Currículo
@@ -116,13 +128,25 @@ export default function Home() {
 
             {/* Social buttons */}
             <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
-              <a href="https://github.com/guedev" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/guedev"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <AiFillGithub className="hover:text-gray-800 dark:hover:text-gray-600" />
               </a>
-              <a href="https://www.linkedin.com/in/lucasguedes27/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.linkedin.com/in/lucasguedes27/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <AiFillLinkedin className="hover:text-gray-800 dark:hover:text-gray-600" />
               </a>
-              <a href="https://www.instagram.com/gued_1/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.instagram.com/gued_1/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <AiFillInstagram className="hover:text-gray-800 dark:hover:text-gray-600" />
               </a>
             </div>
@@ -160,7 +184,7 @@ export default function Home() {
           {/* Cards Conhecimentos */}
           <div className="lg:flex gap-10">
             <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1 lg:w-1/3 dark:bg-gray-700">
-              <Image src={front} width={100} height={100} className="mx-auto" />
+              <Image src={front} alt="icone computador com codigos" width={100} height={100} className="mx-auto" />
               <h3 className="text-lg pt-8 pb-2 font-bold dark:text-gray-200">
                 Sólidos
               </h3>
@@ -181,7 +205,7 @@ export default function Home() {
             </div>
 
             <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1 lg:w-1/3 dark:bg-gray-700">
-              <Image src={back} width={100} height={100} className="mx-auto" />
+              <Image src={back} alt="computador com codigos binários" width={100} height={100} className="mx-auto" />
               <h3 className="text-lg font-bold pt-8 pb-2 dark:text-gray-200">
                 Em Estudo
               </h3>
@@ -199,6 +223,7 @@ export default function Home() {
             <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1 lg:w-1/3 md:flex-wrap dark:bg-gray-700">
               <Image
                 src={dataBase}
+                alt="icone representando informações"
                 width={100}
                 height={100}
                 className="mx-auto"
@@ -391,30 +416,44 @@ export default function Home() {
             <hr></hr>
 
             <footer className="mt-8 flex flex-col items-center">
-              {/* Zip zop */}
-              <div className="text-center">
-              <a
-              href="https://api.whatsapp.com/send?phone=5591988719255&text=Olá,%20Lucas.%20Acessei%20seu%20site%20e%20tenho%20interesse%20em%20conversar%20sobre%20alguns%20projetos"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-700 text-white w-4/5 font-bold mx-auto py-2 px-4 rounded flex items-center"
-              >
-              <SiWhatsapp className="mr-2 text-4xl" />
-              Enviar mensagem no WhatsApp
-              </a>
+              
+              <div className="text-5xl flex justify-center mt-4 md:gap-16 sm:gap-8 py-3 text-gray-600 dark:text-gray-400">
+                <a
+                  href="https://api.whatsapp.com/send?phone=5591988719255&text=Olá,%20Lucas.%20Acessei%20seu%20site%20e%20tenho%20interesse%20em%20conversar%20sobre%20alguns%20projetos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  
+                  <SiWhatsapp className="hover:text-gray-800 dark:hover:text-gray-600" />
+                </a>
+
+                <a
+                  href="https://github.com/guedev"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  
+                  <AiFillGithub className="hover:text-gray-800 dark:hover:text-gray-600" />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/lucasguedes27/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillLinkedin className="hover:text-gray-800 dark:hover:text-gray-600" />
+                </a>
+                <a
+                  href="https://www.instagram.com/gued_1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillInstagram className="hover:text-gray-800 dark:hover:text-gray-600" />
+                </a>
               </div>
-              <div className="text-5xl flex justify-center mt-4 gap-8 py-3 text-gray-600 dark:text-gray-400">
-              <a href="https://github.com/guedev" target="_blank" rel="noopener noreferrer">
-                <AiFillGithub className="hover:text-gray-800 dark:hover:text-gray-600" />
-              </a>
-              <a href="https://www.linkedin.com/in/lucasguedes27/" target="_blank" rel="noopener noreferrer">
-                <AiFillLinkedin className="hover:text-gray-800 dark:hover:text-gray-600" />
-              </a>
-              <a href="https://www.instagram.com/gued_1/" target="_blank" rel="noopener noreferrer">
-                <AiFillInstagram className="hover:text-gray-800 dark:hover:text-gray-600" />
-              </a>
-            </div>
-            <span className="mt-4 mb-8 font-bold dark:text-gray-200">Desenvolvido com ❤️ por Lucas Guedes</span>
+              <span className="mt-4 mb-8 font-bold dark:text-gray-200">
+                Desenvolvido com ❤️ por Lucas Guedes
+              </span>
             </footer>
           </div>
         </section>
