@@ -120,7 +120,7 @@ export default function Home() {
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
               Desenvolvedor Front-end.
             </h3>
-            <p className="text-md mb-8 py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-4xl mx-auto md:text-xl">
+            <p className="text-md font-semibold mb-8 py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-6xl mx-auto md:text-2xl">
             Olá, sou um desenvolvedor front-end com experiência em <span className="text-teal-500">JavaScript e React.</span> Trabalho com desenvolvimento web, e meu foco principal é fornecer soluções de alta qualidade e escaláveis.
             Sou uma pessoa apaixonada pelo que faço e estou sempre procurando novas tecnologias e tendências para me manter atualizado. Trabalhar em equipe é essencial para mim, e estou sempre disposto a colaborar com outros desenvolvedores e designers para alcançar os melhores resultados.
             </p>
@@ -149,7 +149,7 @@ export default function Home() {
                 <AiFillInstagram className="hover:text-gray-800 dark:hover:text-gray-600" />
               </a>
             </div>
-            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
+            <div className="mb-16 mx-auto bg-gradient-to-b from-teal-500 rounded-full h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
               <Image
                 src={avatar}
                 layout="fill"
