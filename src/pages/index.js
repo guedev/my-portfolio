@@ -113,7 +113,7 @@ export default function Home() {
           </nav>
 
           {/* My bio */}
-          <div className="text-center p-10 py-10">
+          <div className="text-center p-10 py-10 sm:p-2">
             <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
               Lucas Guedes
             </h2>
