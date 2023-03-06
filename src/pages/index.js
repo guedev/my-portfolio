@@ -120,10 +120,9 @@ export default function Home() {
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
               Desenvolvedor Front-end.
             </h3>
-            <p className="text-md mb-8 py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-              consectetur lectus urna, et iaculis libero consectetur sed. Morbi
-              sagittis nisi ut nisl scelerisque, a malesuada nisl faucibus.
+            <p className="text-md mb-8 py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-4xl mx-auto md:text-xl">
+            Olá, sou um desenvolvedor front-end com experiência em <span className="text-teal-500">JavaScript e React.</span> Trabalho com desenvolvimento web, e meu foco principal é fornecer soluções de alta qualidade e escaláveis.
+            Sou uma pessoa apaixonada pelo que faço e estou sempre procurando novas tecnologias e tendências para me manter atualizado. Trabalhar em equipe é essencial para mim, e estou sempre disposto a colaborar com outros desenvolvedores e designers para alcançar os melhores resultados.
             </p>
 
             {/* Social buttons */}
@@ -358,10 +357,7 @@ export default function Home() {
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Entre em contato</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Since the beginning of my journey as a freelance designer and
-              developer, I've done remote work for and collaborated with
-              talanted people to create digital products for both business and
-              consumer use.
+            Se você está procurando um desenvolvedor front-end experiente em JavaScript e React, fique à vontade para entrar em contato comigo para discutirmos suas necessidades e como posso ajudar.
             </p>
 
             {/* <div className="p-8 flex justify-center">
