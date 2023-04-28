@@ -104,7 +104,7 @@ export default function Home() {
               <li>
                 <a
                   className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8 hover:bg-gradient-to-r hover:from-teal-600 hover:to-cyan-600"
-                  href="#"
+                  href="/curriculumVitaeLucasGuedes.pdf" download
                 >
                   Currículo
                 </a>
@@ -166,17 +166,7 @@ export default function Home() {
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Tecnologias</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Fusce imperdiet elementum est. Duis quis bibendum dolor, nec
-              volutpat nunc. Vivamus scelerisque vitae justo sit amet ornare.
-              Nam nec <span className="text-teal-500"> agencies </span> mauris
-              eleifend ante imperdiet semper. Mauris{" "}
-              <span className="text-teal-500">startups </span> ullamcorper
-              scelerisque odio, id vestibulum sem ultrices id. Nam aliquam,
-              ipsum tincidunt.
-            </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
+            Ao longo da minha carreira como desenvolvedor, adquiri habilidades em diversas tecnologias para <span className="text-teal-500">desenvolvimento web e bancos de dados</span>. Meu conhecimento me permite criar soluções completas e eficientes, que atendem às necessidades do projeto. Busco sempre estar atualizado com as últimas tendências e tecnologias para fornecer soluções modernas e de qualidade aos meus clientes.
             </p>
           </div>
 
@@ -250,16 +240,7 @@ export default function Home() {
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Projetos</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              Since the beginning of my journey as a freelance designer and
-              developer, I've done remote work for
-              <span className="text-teal-500"> agencies </span>
-              consulted for <span className="text-teal-500">startups </span>
-              and collaborated with talanted people to create digital products
-              for both business and consumer use.
-            </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
+            Aqui estão alguns dos meus projetos. Cada projeto foi uma oportunidade para aprimorar minhas habilidades e aprender novas tecnologias. Confira alguns dos projetos que já desenvolvi e entre em contato para saber como posso ajudar a tornar sua ideia em realidade.
             </p>
           </div>
 
