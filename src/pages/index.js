@@ -289,7 +289,7 @@ export default function Home() {
               {/* Projects Buttons */}
               <a
                 className="flex items-center justify-center gap-2 mt-4 mb-4 bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md w-1/4 hover:bg-gradient-to-r hover:from-teal-600 hover:to-cyan-600 md:w-1/2"
-                href="#"
+                href="https://github.com/guedev/clone_netflix"
               >
                 Github <AiFillGithub />
               </a>
@@ -313,7 +313,7 @@ export default function Home() {
               {/* Projects Buttons */}
               <a
                 className="flex items-center justify-center gap-2 mt-4 mb-4 bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md w-1/4 hover:bg-gradient-to-r hover:from-teal-600 hover:to-cyan-600 md:w-1/2"
-                href="#"
+                href="https://github.com/guedev/ProjetoPokedex"
               >
                 Github <AiFillGithub />
               </a>
@@ -343,7 +343,7 @@ export default function Home() {
               {/* Projects Buttons */}
               <a
                 className="flex items-center justify-center gap-2 mt-4 mb-4 bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md w-1/4 hover:bg-gradient-to-r hover:from-teal-600 hover:to-cyan-600 md:w-1/2"
-                href="#"
+                href="https://github.com/guedev/guedMovie"
               >
                 Github <AiFillGithub />
               </a>
