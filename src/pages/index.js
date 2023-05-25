@@ -33,6 +33,7 @@ import dataBase from "../../public/database.png";
 import netflix from "../../public/netflix.png";
 import pokemon from "../../public/pokemon.png";
 import guedmovie from "../../public/guedmovie.png";
+import miranha from "../../public/miranha.png";
 import emailSend from "../../public/email_send.svg";
 
 export default function Home() {
@@ -258,8 +259,8 @@ export default function Home() {
                 alt="Print do projeto netflix clone"
               />
               <h3 className="font-burtons dark:text-gray-200">Netflix Clone</h3>
-              <p className="mt-4 px-8 dark:text-gray-200">
-                Projeto feito utilizando ReactJs e API do site{" "}
+              <p className="mt-4 px-8 dark:text-gray-200 lg:h-44">
+                Projeto feito utilizando ReactJs e API do site
                 <a
                   className="hover:text-gray-500"
                   href="https://www.themoviedb.org/?language=pt"
@@ -270,7 +271,7 @@ export default function Home() {
               {/* Projects Buttons */}
               <a
                 className="flex items-center justify-center gap-2 mt-4 mb-4 bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md w-1/4 hover:bg-gradient-to-r hover:from-teal-600 hover:to-cyan-600 md:w-1/2"
-                href="#"
+                href="https://github.com/guedev/clone_netflix"
               >
                 Github <AiFillGithub />
               </a>
@@ -287,14 +288,14 @@ export default function Home() {
                 alt="Print do projeto pokemon"
               />
               <h3 className="font-burtons dark:text-gray-200">Pokedex</h3>
-              <p className="mt-4 px-8 dark:text-gray-200">
+              <p className="mt-4 px-8 dark:text-gray-200 lg:h-44">
                 Projeto utilizando HTML, CSS, e Javascript (Sem utilização de
                 API).
               </p>
               {/* Projects Buttons */}
               <a
                 className="flex items-center justify-center gap-2 mt-4 mb-4 bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md w-1/4 hover:bg-gradient-to-r hover:from-teal-600 hover:to-cyan-600 md:w-1/2"
-                href="#"
+                href="https://github.com/guedev/ProjetoPokedex"
               >
                 Github <AiFillGithub />
               </a>
@@ -311,7 +312,7 @@ export default function Home() {
                 alt="Print do projeto guedmovie"
               />
               <h3 className="font-burtons dark:text-gray-200">GuedMovie</h3>
-              <p className="mt-4 px-8 dark:text-gray-200">
+              <p className="mt-4 px-8 dark:text-gray-200 lg:h-44">
                 Mostrando avalição dos filmes e alguns outros detalhes,
                 utilizando ReactJs e API do{" "}
                 <a
@@ -324,7 +325,29 @@ export default function Home() {
               {/* Projects Buttons */}
               <a
                 className="flex items-center justify-center gap-2 mt-4 mb-4 bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md w-1/4 hover:bg-gradient-to-r hover:from-teal-600 hover:to-cyan-600 md:w-1/2"
-                href="#"
+                href="https://github.com/guedev/guedMovie"
+              >
+                Github <AiFillGithub />
+              </a>
+            </div>
+
+             {/* Portfolio */}
+             <div className="flex flex-col flex-1 text-center items-center shadow-lg rounded-xl dark:bg-gray-700 lg:w-1/3">
+              <Image
+                className="rounded-lg object-cover mb-8 rounded-t-xl"
+                width={"100%"}
+                height={"100%"}
+                layout="responsive"
+                src={miranha}
+                alt="Print do projeto portfolio"/>
+              <h3 className="font-burtons dark:text-gray-200">Esse site</h3>
+              <p className="mt-4 px-8 dark:text-gray-200 lg:h-44">
+                Site construído com as tecnologias Next.js e Tailwind CSS, a biblioteca nodemailer para o envio de email, e utilizando o Vercel para o Deploy.
+              </p>
+              {/* Projects Buttons */}
+              <a
+                className="flex items-center justify-center gap-2 mt-4 mb-4 bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md w-1/4 hover:bg-gradient-to-r hover:from-teal-600 hover:to-cyan-600 md:w-1/2"
+                href="https://github.com/guedev/my-portfolio"
               >
                 Github <AiFillGithub />
               </a>
