@@ -3,8 +3,6 @@ import Head from "next/head";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
-import { BsFillMoonStarsFill, BsFillEmojiSunglassesFill } from "react-icons/bs";
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
 import {
   SiJavascript,
@@ -35,17 +33,11 @@ import pokemon from "../../public/pokemon.png";
 import guedmovie from "../../public/guedmovie.png";
 import miranha from "../../public/miranha.png";
 import emailSend from "../../public/email_send.svg";
+import Navbar from "@/components/navBar";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   
-  // Change icons theme
-  const icon = darkMode ? (
-    <BsFillEmojiSunglassesFill />
-  ) : (
-    <BsFillMoonStarsFill />
-  );
-
   
   // Email function configuration
 
@@ -91,29 +83,13 @@ export default function Home() {
       >
         {/* First Section */}
         <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between dark:text-white">
-            <h1 className="font-burtons text-xl">Lucas Guedes</h1>
-            <ul className="flex items-center">
-              <li>
-                <a
-                  onClick={() => setDarkMode(!darkMode)}
-                  className=" cursor-pointer text-2xl"
-                >
-                  {icon}
-                </a>
-              </li>
-              <li>
-                <a
-                  className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8 hover:bg-gradient-to-r hover:from-teal-600 hover:to-cyan-600"
-                  href="/curriculumVitaeLucasGuedes.pdf" download
-                >
-                  Currículo
-                </a>
-              </li>
-            </ul>
-          </nav>
+
+          {/* Componente 1 */}
+          <Navbar darkMode={darkMode} setDarkMode={setDarkMode}/>
+          {/* FIm Componente 1 */}
 
           {/* My bio */}
+          {/* Componente 2 */}
           <div className="text-center p-10 py-10 sm:p-2">
             <h2 className="text-5xl py-2 text-teal-600 font-medium dark:text-teal-400 md:text-6xl">
               Lucas Guedes
@@ -159,11 +135,13 @@ export default function Home() {
               />
             </div>
           </div>
+          {/* FIm Componente 2 */}
         </section>
 
         {/* Second Section */}
         <section>
           {/* My Knoledges */}
+          {/* Componente 3 */}
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Tecnologias</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -233,11 +211,13 @@ export default function Home() {
               </div>
             </div>
           </div>
+          {/* FIm Componente 3 */}
         </section>
 
         {/* Third section */}
         <section className="py-10">
           {/* Portfolio */}
+          {/* Componente 4 */}
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Projetos</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -353,11 +333,13 @@ export default function Home() {
               </a>
             </div>
           </div>
+          {/* FIm Componente 4 */}
         </section>
 
         {/* Fourth Section */}
         <section>
           {/* Contate-me */}
+          {/* Componente 5 */}
           <div>
             <h3 className="text-3xl py-1 dark:text-white ">Entre em contato</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
@@ -456,6 +438,7 @@ export default function Home() {
               </span>
             </footer>
           </div>
+          {/* FIm Componente 5 */}
         </section>
       </main>
     </div>
