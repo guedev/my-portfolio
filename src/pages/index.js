@@ -4,29 +4,9 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AiFillLinkedin, AiFillGithub, AiFillInstagram } from "react-icons/ai";
-import {
-  SiJavascript,
-  SiReact,
-  SiHtml5,
-  SiCss3,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiOracle,
-  SiPython,
-  SiNextdotjs,
-  SiBootstrap,
-  SiNestjs,
-  SiPostgresql,
-  SiRedux,
-  SiGit,
-  SiFlutter,
-  SiAmazonaws,
-  SiWhatsapp,
-} from "react-icons/si";
+import { SiWhatsapp } from "react-icons/si";
 import Image from "next/image";
-import front from "../../public/front.png";
-import back from "../../public/back.png";
-import dataBase from "../../public/database.png";
+
 import netflix from "../../public/netflix.png";
 import pokemon from "../../public/pokemon.png";
 import guedmovie from "../../public/guedmovie.png";
@@ -34,6 +14,7 @@ import miranha from "../../public/miranha.png";
 import emailSend from "../../public/email_send.svg";
 import Navbar from "@/components/navBar";
 import MyBio from "@/components/myBio";
+import Techs from "@/components/techs";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -89,78 +70,7 @@ export default function Home() {
 
         {/* Second Section */}
         <section>
-          {/* My Knoledges */}
-          {/* Componente 3 */}
-          <div>
-            <h3 className="text-3xl py-1 dark:text-white ">Tecnologias</h3>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
-            Ao longo da minha carreira como desenvolvedor, adquiri habilidades em diversas tecnologias para <span className="text-teal-500">desenvolvimento web e bancos de dados</span>. Meu conhecimento me permite criar soluções completas e eficientes, que atendem às necessidades do projeto. Busco sempre estar atualizado com as últimas tendências e tecnologias para fornecer soluções modernas e de qualidade aos meus clientes.
-            </p>
-          </div>
-
-          {/* Cards Conhecimentos */}
-          <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1 lg:w-1/3 dark:bg-gray-700">
-              <Image src={front} alt="icone computador com codigos" width={100} height={100} className="mx-auto" />
-              <h3 className="text-lg pt-8 pb-2 font-bold dark:text-gray-200">
-                Sólidos
-              </h3>
-
-              <hr></hr>
-
-              {/* Icons Solid */}
-              <div className="text-5xl flex flex-col gap-6 items-center mt-5 md:flex-row md:justify-center md:mt-8 md:flex-wrap">
-                <SiJavascript className="rounded-lg text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-                <SiReact className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-                <SiHtml5 className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-                <SiCss3 className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-                <SiTailwindcss className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-                <SiBootstrap className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-                <SiPostgresql className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400 " />
-                <SiGit className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-              </div>
-            </div>
-
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1 lg:w-1/3 dark:bg-gray-700">
-              <Image src={back} alt="computador com codigos binários" width={100} height={100} className="mx-auto" />
-              <h3 className="text-lg font-bold pt-8 pb-2 dark:text-gray-200">
-                Em Estudo
-              </h3>
-
-              <hr></hr>
-
-              {/* Icons Estudy */}
-              <div className="text-5xl flex flex-col gap-6 items-center mt-5 md:flex-row md:justify-center md:mt-8 md:flex-wrap">
-                <SiNodedotjs className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-                <SiOracle className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-                <SiNextdotjs className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-                <SiRedux className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-              </div>
-            </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1 lg:w-1/3 md:flex-wrap dark:bg-gray-700">
-              <Image
-                src={dataBase}
-                alt="icone representando informações"
-                width={100}
-                height={100}
-                className="mx-auto"
-              />
-              <h3 className="text-lg font-bold pt-8 pb-2 dark:text-gray-200">
-                Interesses
-              </h3>
-
-              <hr></hr>
-
-              {/* Icons interesses */}
-              <div className="text-5xl flex flex-col gap-6 items-center mt-5 md:flex-row md:justify-center md:mt-8 md:flex-wrap">
-                <SiPython className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-                <SiNestjs className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-                <SiFlutter className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-                <SiAmazonaws className=" text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400" />
-              </div>
-            </div>
-          </div>
-          {/* FIm Componente 3 */}
+          <Techs />
         </section>
 
         {/* Third section */}
