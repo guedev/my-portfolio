@@ -17,6 +17,7 @@ import {
   SiFlutter,
   SiAmazonaws,
   SiRedux,
+  SiAngular,
 } from 'react-icons/si';
 
 import front from '../../public/front.png';
@@ -24,21 +25,22 @@ import back from '../../public/back.png';
 import dataBase from '../../public/database.png';
 
 const solidTechnologies = [
-  { name: 'JavaScript', icon: <SiJavascript title="JavaScript" /> },
-  { name: 'React', icon: <SiReact title="React" /> },
-  { name: 'HTML5', icon: <SiHtml5 title="HTML5" /> },
-  { name: 'CSS3', icon: <SiCss3 title="CSS3" /> },
-  { name: 'Tailwind CSS', icon: <SiTailwindcss title="Tailwind CSS" /> },
-  { name: 'Bootstrap', icon: <SiBootstrap title="Bootstrap" /> },
-  { name: 'PostgreSQL', icon: <SiPostgresql title="PostgreSQL" /> },
-  { name: 'Git', icon: <SiGit title="Git" /> },
-  { name: 'Redux', icon: <SiRedux title="Redux" /> },
+  { name: 'JavaScript', icon: <SiJavascript title="JavaScript" className='text-yellow-300 hover:text-yellow-500'/> },
+  { name: 'React', icon: <SiReact title="React" className='text-blue-300 hover:text-blue-500'/> },
+  { name: 'HTML5', icon: <SiHtml5 title="HTML5" className='text-orange-400 hover:text-orange-500'/> },
+  { name: 'CSS3', icon: <SiCss3 title="CSS3" className='text-blue-600 hover:text-blue-700'/> },
+  { name: 'Tailwind CSS', icon: <SiTailwindcss title="Tailwind CSS" className='text-blue-300 hover:text-blue-500'/> },
+  { name: 'Bootstrap', icon: <SiBootstrap title="Bootstrap" className='text-purple-400 hover:text-purple-600'/> },
+  { name: 'PostgreSQL', icon: <SiPostgresql title="PostgreSQL" className='text-blue-800 hover:text-blue-700'/> },
+  { name: 'Git', icon: <SiGit title="Git" className='text-orange-800 hover:text-orange-900' /> },
+  { name: 'Redux', icon: <SiRedux title="Redux" className='text-purple-700 hover:text-purple-600'/> },
+  { name: 'Node.js', icon: <SiNodedotjs title="Node.js" className='text-green-700 hover:text-green-600'/> },
 ];
 
 const studyTechnologies = [
-  { name: 'Node.js', icon: <SiNodedotjs title="Node.js" /> },
   { name: 'Oracle', icon: <SiOracle title="Oracle" /> },
   { name: 'Next.js', icon: <SiNextdotjs title="Next.js" /> },
+  { name: 'Angular', icon: <SiAngular /> },
 ];
 
 const interestTechnologies = [
@@ -63,8 +65,9 @@ export default function Techs() {
         <hr />
         <div className="text-5xl flex flex-col gap-6 items-center mt-5 md:flex-row md:justify-center md:mt-8 md:flex-wrap">
           {technologies.map((tech, index) => (
-            <div key={index} title={tech.name} className=' text-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400'>
+            <div key={index} title={tech.name} className=' ttext-gray-600 hover:text-gray-800 dark:text-gray-200 dark:hover:text-gray-400 flex flex-col items-center'>
               {tech.icon}
+              <p className='text-sm mt-2'>{tech.name}</p>
             </div>
           ))}
         </div>
