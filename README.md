@@ -9,7 +9,7 @@ Portfolio Next.Js
 | :label: Tecnologias | Html, Tailwind CSS, Next.Js, Vercel
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![](https://images2.imgbox.com/68/f4/gsTnrjNw_o.png)
+![](https://images2.imgbox.com/68/f4/gsTnrjNw_o.png#vitrinedev)
 
 ## Detalhes do projeto
 
